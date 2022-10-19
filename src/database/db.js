@@ -6,7 +6,7 @@ const sqlConfig = {
 	user: 'jovenesmvm',
 	password: '0^618Bjt37y@',
 	database: 'gestionsolicitudes',
-	server: 'gestionsolicitudes.database.windows.net',
+	server: 'gestionsolicitudes2.database.windows.net',
 	pool: {
 		max: 10,
 		min: 0,
