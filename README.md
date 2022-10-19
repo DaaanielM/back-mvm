@@ -58,7 +58,7 @@ Y así mismo con los demás servicios. Para encontrar las rutas, podemos ir a la
 
 ## Construido con 🛠️
 
--   [node-mssql](https://www.npmjs.com/package/mssql) - El framework web usado
+-   [node-mssql](https://www.npmjs.com/package/mssql) - Cliente de Microsoft SQL Server para Node.js.
 -   [node-cors](https://www.npmjs.com/package/cors) - Control de accesso HTTP
 -   [express](https://www.npmjs.com/package/express) - Entorno de trabajo para aplicaciones web y APIS.
 -   [morgan](https://www.npmjs.com/package/morgan) - Middleware de registro de solicitudes HTTP
