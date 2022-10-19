@@ -5,7 +5,7 @@ const controller = {};
 //request es el objeto que se envia al servidor y response es la respuesta que se recibe del servidor
 controller.listar = async (req, res) => {
 	const solicitudes = await model.listar();
-	
+	// status 200 es que todo esta bien
 	res.status(200).send(solicitudes);
 };
 
