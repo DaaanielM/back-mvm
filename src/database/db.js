@@ -5,8 +5,8 @@ const sql = require('mssql');
 const sqlConfig = {
 	user: 'jovenesmvm',
 	password: '0^618Bjt37y@',
-	database: 'gestionsolicitudes',
-	server: 'gestionsolicitudes2.database.windows.net',
+	database: 'sqldb-gestionsolicitudes-pdn-001',
+	server: 'sql-gestionsolicitudes-pdn-001.database.windows.net',
 	pool: {
 		max: 10,
 		min: 0,

@@ -47,8 +47,10 @@ app.engine(
 );
 
 // Midlewars para configurar el servidor
+// Cors sirve para que se puedan hacer peticiones desde cualquier origen
 app.use(cors());
 app.use(express.json());
+// Morgan sirve para ver las peticiones que se hacen al servidor
 app.use(morgan('dev'));
 
 // Routes para el servidor

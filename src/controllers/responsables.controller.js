@@ -4,7 +4,7 @@ const controller = {};
 
 controller.listar = async (req, res) => {
 	const result = await model.listar();
-	res.status(200).send(result);
+	res.status(200).send(result.recordsets);
 };
 
 module.exports = controller;

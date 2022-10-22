@@ -4,7 +4,12 @@ const model = {};
 
 model.listar = async () => {
 	const pool = await conexion;
-	const sql = `SELECT * FROM Solicitud`;
+	const sql = `SELECT SO.Radicado, SO.Descripcion, SO.FechaSolicitud, SO.FechaRespuesta, RE.NombreResponsable,
+	SO.CorreoSolicitante, SO.NombreSolicitante, SO.ApellidoSolicitante, SO.TelefonoSolicitante, SO.NombreEmpresa, TS.TipoSolicitud, ES.Nombre
+	FROM Solicitud SO
+	INNER JOIN TipoSolicitud TS on SO.IdTipoSolicitud = TS.IDTipo
+	INNER JOIN Responsable RE on SO.IDResponsable = RE.IDResponsable
+	INNER JOIN Estado ES on SO.IDEstado = ES.IDEstado`;
 	// select so.Radicado, so.Descripcion, so.FechaSolicitud, so.FechaRespuesta, so.IDResponsable, so.CorreoSolicitante,
 	// so.NombreSolicitante, so.ApellidoSolicitante, so.TelefonoSolicitante, so.NombreEmpresa,ts.TipoSolicitud, so.IDEstado from Solicitud so
 	// inner join TipoSolicitud ts on ts.IDTipo = so.IdTipoSolicitud
