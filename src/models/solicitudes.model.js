@@ -4,15 +4,8 @@ const model = {};
 
 model.listar = async () => {
 	const pool = await conexion;
-	const sql = `SELECT SO.Radicado, SO.Descripcion, SO.FechaSolicitud, SO.FechaRespuesta, RE.NombreResponsable,
-	SO.CorreoSolicitante, SO.NombreSolicitante, SO.ApellidoSolicitante, SO.TelefonoSolicitante, SO.NombreEmpresa, TS.TipoSolicitud, ES.Nombre
-	FROM Solicitud SO
-	INNER JOIN TipoSolicitud TS on SO.IdTipoSolicitud = TS.IDTipo
-	INNER JOIN Responsable RE on SO.IDResponsable = RE.IDResponsable
-	INNER JOIN Estado ES on SO.IDEstado = ES.IDEstado`;
-	// select so.Radicado, so.Descripcion, so.FechaSolicitud, so.FechaRespuesta, so.IDResponsable, so.CorreoSolicitante,
-	// so.NombreSolicitante, so.ApellidoSolicitante, so.TelefonoSolicitante, so.NombreEmpresa,ts.TipoSolicitud, so.IDEstado from Solicitud so
-	// inner join TipoSolicitud ts on ts.IDTipo = so.IdTipoSolicitud
+	const sql = `SELECT * FROM Solicitud`;
+
 	const result = await pool.request().query(sql);
 
 	//recordset sirve para obtener los datos de la consulta
@@ -31,7 +24,7 @@ model.obtenerSolicitud = async (id) => {
 // mandar cmo null la fecha respuesta y el idresponsable
 model.crear = async (datos) => {
 	const pool = await conexion;
-	const sql = `INSERT INTO Solicitud (Radicado, Descripcion, FechaSolicitud, FechaRespuesta, IDResponsable, CorreoSolicitante, NombreSolicitante, ApellidoSolicitante, TelefonoSolicitante, NombreEmpresa, IdTipoSolicitud, IDEstado) VALUES ('${datos.Radicado}', '${datos.Descripcion}', '${datos.FechaSolicitud}', null, null, '${datos.CorreoSolicitante}', '${datos.NombreSolicitante}', '${datos.ApellidoSolicitante} ', '${datos.TelefonoSolicitante}', '${datos.NombreEmpresa}', '${datos.IdTipoSolicitud}',1)
+	const sql = `INSERT INTO Solicitud (Radicado, Descripcion, FechaSolicitud, FechaRespuesta, IDResponsable, CorreoSolicitante, NombreSolicitante, ApellidoSolicitante, TelefonoSolicitante, NombreEmpresa, IdTipoSolicitud, IDEstado) VALUES ('${datos.Radicado}', '${datos.Descripcion}', '${datos.FechaSolicitud}', null, null, '${datos.CorreoSolicitante}', '${datos.NombreSolicitante}', '${datos.ApellidoSolicitante} ', '${datos.TelefonoSolicitante}', '${datos.NombreEmpresa}', '${datos.IdTipoSolicitud}', 1)
 	`;
 	const result = await pool.request().query(sql, datos);
 
