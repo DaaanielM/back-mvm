@@ -6,6 +6,9 @@ El siguiente repositorio contiene:
 -   Configuración a la base de datos de mssql (Cliente de Microsoft SQL Server)
 -   Modelo, vista y controlador de los servicios
 
+## Proyecto Solicitudes 
+- [Requerimientos](https://mvmingenieriadesoftware-my.sharepoint.com/:w:/g/personal/fabian_coronel_mvm_com_co/EZs4DVtHluVDv3GwU3JM-GgB5V8MCbd34AW9uwy-GFfHmQ?e=qjUKbt)
+
 ### Pre-requisitos 📋
 
 -   Tener VSCode o parecidos
@@ -30,16 +33,11 @@ npm run dev
 
 Una vez instalado y ejecutado el proyecto. Podremos encontrar: la configuración a la base de datos, puerto, modelo, controlador y rutas.
 
-Para obtener algún dato de la base de datos, ingresamos al POSTMAN y ponemos la ruta para listar solicitudes, por ejemplo:
+## DEMO de como usar las APIS 👾
 
-```
-https://apimvm.azurewebsites.net//solicitudes/listar
-```
+![demo.gif]()
 
-Este get, nos tendría que listar las solicitudes que tengamos en nuestra base de datos:
-![Image text](https://github.com/DaaanielM/back-mvm/blob/master/src/get.png)
 
-Y así mismo con los demás servicios. Para encontrar las rutas, podemos ir a la carpeta de routes.
 
 ## Despliegue 📦
 
@@ -51,10 +49,10 @@ Y así mismo con los demás servicios. Para encontrar las rutas, podemos ir a la
 -   El proceso anterior, nos crea una URL de git, donde podremos subir nuestro código
 -   Creamos un credencial de usuario, para darle seguridad a nuestro código
 -   Luego, vamos a inicio y copiamos la URL que nos esta dando Azure
--   Abrimos la consola y añadimos una nueva dirección remota (git remote azure [#url] )
+-   Abrimos la consola y añadimos una nueva dirección remota (git remote azure [#url])
 -   Subimos el código con (git push -u azure master)
 -   Nos pedira las credenciales que creamos en Azure, las ingresamos y damos a continuar
--   Mientras suben los cambios, el ejecuta el comando npm start y con esto finalizamos el despliegue.
+-   Una vez se suben los cambios, ejecutamos el comando ([npm start])
 
 ## Construido con 🛠️
 
