@@ -4,7 +4,21 @@ const model = {};
 
 model.listar = async () => {
 	const pool = await conexion;
-	const sql = `SELECT * FROM Solicitud`;
+	const sql = `SELECT
+	IDSolicitud,
+	Radicado,
+	Descripcion,
+	IDResponsable,
+	CorreoSolicitante,
+	NombreSolicitante,
+	ApellidoSolicitante,
+	TelefonoSolicitante,
+	NombreEmpresa,
+	IdTipoSolicitud,
+	IDEstado,
+	FORMAT(FechaSolicitud, 'yyyy-MM-dd HH:mm') as FechaSolicitud,
+	FORMAT(FechaRespuesta, 'yyyy-MM-dd HH:mm') as FechaRespuesta
+	FROM Solicitud`;
 
 	const result = await pool.request().query(sql);
 

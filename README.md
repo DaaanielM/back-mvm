@@ -25,7 +25,7 @@ npm i
 Ejecutar con
 
 ```
-nodemon index.js
+npm run dev
 ```
 
 Una vez instalado y ejecutado el proyecto. Podremos encontrar: la configuración a la base de datos, puerto, modelo, controlador y rutas.
@@ -33,7 +33,7 @@ Una vez instalado y ejecutado el proyecto. Podremos encontrar: la configuración
 Para obtener algún dato de la base de datos, ingresamos al POSTMAN y ponemos la ruta para listar solicitudes, por ejemplo:
 
 ```
-localhost:9000/solicitudes/listar
+https://apimvm.azurewebsites.net//solicitudes/listar
 ```
 
 Este get, nos tendría que listar las solicitudes que tengamos en nuestra base de datos:

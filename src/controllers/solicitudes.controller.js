@@ -26,6 +26,8 @@ controller.crear = async (req, res) => {
 		fecha.getMonth() + 1
 	}-${fecha.getDate()} ${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}.${fecha.getMilliseconds()}`;
 
+	// convertir string en numero
+
 	//Datos que se envian desde el front
 	const data = {
 		Radicado: radicado,
